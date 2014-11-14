@@ -1,0 +1,15 @@
+b =[1 -1];
+a1 =[1 -1.499 0.8482];
+a2 =[1 -1.5548 0.6493];
+b =conv(b.^2,b.^2);
+a =conv(a1,a2);
+w =linspace(0,pi,512);
+H =freqz(b,a,w);
+subplot(2,1,1);
+plot(w/pi,abs(H));
+ylabel('·ù¶È');
+xlabel('Normalized frequency');
+subplot(2,1,2);
+plot(w/pi,angle(H));
+ylabel('ÏàÎ»');
+xlabel('Normalized frequency');
